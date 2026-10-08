@@ -7,7 +7,6 @@
 ## Conventions
 - API 错误统一为 `{ error: { code, message } }`。
 - 每个新数据库字段必须有 up/down 迁移。
-- 禁止在客户端明文存储 token。
 
 ## Architecture
 - `src/api/` 路由，`src/services/` 业务逻辑，`src/db/` 数据访问，`migrations/` 数据库迁移。
