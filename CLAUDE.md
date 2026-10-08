@@ -3,7 +3,6 @@
 ## Commands
 - `npm test` — 运行单元测试。健康输出：`Tests: 12 passed, 12 total`。
 - `npm run lint` — 运行 ESLint。健康输出：`✔ 0 problems`。
-- `npm run dev` — 启动开发服务器。健康输出：`Server running at http://localhost:3000`。
 
 ## Conventions
 - API 错误统一为 `{ error: { code, message } }`。
