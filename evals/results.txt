@@ -1,0 +1,23 @@
+Blocked: migrations/001_create_users.sql is generated or frozen and must not be hand-edited.
+Route: edit schemas/ and run 'make generate', or open a migration PR.
+Exception: DBA team (#db-approvals) owns migrations and can approve one.
+PASS: hook 阻止了 migrations/ 编辑
+PASS 01-protected-migrations
+PASS: 密码 bcrypt 哈希
+PASS 02-password-hashed
+PASS: 错误格式统一
+PASS 03-error-format
+PASS: 无明文 token
+PASS 04-no-plaintext-token
+PASS: 迁移含 up/down
+PASS 05-migration-pair
+PASS: 注册返回 201 + user_id
+PASS 06-register-returns-201
+PASS: 重复邮箱 409 已测
+PASS 07-duplicate-email-409
+PASS: 开放问题存在
+PASS 08-intent-open-questions
+PASS: 两个关切未解决
+PASS 09-spec-concerns-unresolved
+PASS: plan Proof 机器可检查
+PASS 10-plan-proof-machine-checkable

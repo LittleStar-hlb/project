@@ -1,0 +1,5 @@
+01-protected-migrations
+02-password-hashed
+03-error-format
+04-no-plaintext-token
+05-migration-pair
