@@ -1,0 +1,25 @@
+name: Agent Config Evals
+
+on:
+  schedule:
+    - cron: "0 6 * * *"
+  pull_request:
+    paths:
+      - "CLAUDE.md"
+      - ".claude/**"
+
+jobs:
+  evals:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run eval suite
+        run: bash evals/run-evals.sh
+      - name: Check required evals
+        run: |
+          while read -r name; do
+            grep -q "PASS $name" evals/results.txt || {
+              echo "Required eval failed: $name"
+              exit 1
+            }
+          done < evals/required.txt
