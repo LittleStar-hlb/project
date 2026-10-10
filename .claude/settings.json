@@ -1,13 +1,24 @@
 {
-    "hooks":{
-        "PreToolUse": [{
-            "matcher": "Edit|Write",
-            "hooks": [
-                {
-                    "type": "command",
-                    "command": "bash .claude/hooks/protected-paths.sh"
-                }
-            ]
-        }]
-    }
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash .claude/hooks/protected-paths.sh"
+          }
+        ]
+      },
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash .claude/hooks/production-gate.sh"
+          }
+        ]
+      }
+    ]
+  }
 }
